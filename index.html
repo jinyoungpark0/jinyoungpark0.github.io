@@ -158,6 +158,66 @@
     border-top: 1px solid var(--hairline);
   }
 
+  /* ---- Funded project panel ---- */
+  .grant {
+    background: #EEF3F0;
+    border-left: 3px solid var(--pine);
+    padding: 1.6rem 1.9rem 1.7rem;
+    max-width: 72ch;
+    border-radius: 0 2px 2px 0;
+  }
+  .grant .funder {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--pine);
+    margin-bottom: 0.6rem;
+  }
+  .grant h3 { margin: 0 0 0.9rem; font-size: 1.35rem; line-height: 1.3; font-weight: 500; }
+  .grant h3 em { font-style: italic; }
+  .grant p { max-width: none; }
+  .aims { list-style: none; padding: 0; margin: 1.2rem 0 0; }
+  .aims li {
+    padding: 0.55rem 0 0.55rem 1.1rem;
+    border-left: 2px solid #C9D6D0;
+    font-size: 1.01rem;
+    line-height: 1.55;
+  }
+  .aims li + li { margin-top: 0.35rem; }
+  .aims strong { font-weight: 600; }
+  .getinvolved {
+    margin-top: 1.2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #D6DFDA;
+    font-size: 1rem;
+    color: #3A3934;
+  }
+  .facts {
+    list-style: none;
+    padding: 0;
+    margin: 1.3rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem 2rem;
+    border-top: 1px solid #D6DFDA;
+    padding-top: 1.1rem;
+  }
+  .facts li { font-size: 1rem; line-height: 1.45; }
+  .facts .lbl {
+    display: block;
+    font-family: var(--sans);
+    font-size: 0.76rem;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    margin-bottom: 0.1rem;
+  }
+  @media (max-width: 34rem) {
+    .grant { padding: 1.3rem 1.2rem; }
+    .facts { grid-template-columns: 1fr; }
+  }
+  @media print { .grant { background: none; } }
+
   /* ---- Bibliography: year in its own column, entries hang off it ---- */
   .subhead {
     font-family: var(--sans);
@@ -267,6 +327,7 @@
 <nav aria-label="Site">
   <a class="wordmark" href="#top">Jinyoung Park</a>
   <a href="#research">Research</a>
+  <a href="#project">Project</a>
   <a href="#publications">Publications</a>
   <a href="#books">Books</a>
   <a href="#contact">Contact</a>
@@ -276,12 +337,12 @@
   <div class="frame grid">
     <div class="side">
       <img class="portrait" src="photo.jpg" alt="Jinyoung Park" width="640" height="800">
-      <p class="kicker"><strong>Jinyoung Park, PhD</strong>Social Psychologist<br>Duke University &amp;<br>UNC-Chapel Hill</p>
+      <p class="kicker"><strong>Jinyoung Park, PhD</strong>Social Psychologist<br>Director, Suffering &amp;<br>Compassion Lab<br>Duke University &amp;<br>UNC-Chapel Hill</p>
     </div>
     <div class="content">
       <h1>Suffering is universal. What we <em>believe</em> about it is not.</h1>
       <p class="lede">I study the quiet beliefs that shape how people meet hardship — whether suffering is shared or singular, whether it can enrich as well as diminish — and the hypo-egoic capacities that grow alongside them: self-compassion and intellectual humility. Across U.S., Korean, and Israeli samples, these beliefs and capacities predict resilience, compassion, and the recognition of common humanity, even across lines of active conflict.</p>
-      <p class="lede">I am a postdoctoral associate at Duke University and UNC-Chapel Hill, working with Barbara Fredrickson, and Co-Principal Investigator and Project Director of <em>Reframing Suffering to Foster Common Humanity and Compassion</em>, a $1.3M John Templeton Foundation project (2026–2029). I completed my PhD at Duke in 2026, advised by Rick Hoyle and Mark Leary, following an earlier career as a biostatistician at the UNC School of Medicine.</p>
+      <p class="lede">I am a postdoctoral associate at Duke University and UNC-Chapel Hill, working with Barbara Fredrickson, and Director of the Suffering &amp; Compassion Lab at Duke, where I am Co-Principal Investigator of a $1.3M John Templeton Foundation project on reframing suffering (2026–2029). I completed my PhD at Duke in 2026, advised by Rick Hoyle and Mark Leary, following an earlier career as a biostatistician at the UNC School of Medicine.</p>
     </div>
   </div>
 </header>
@@ -305,6 +366,26 @@
       <p>Recognizing the limits of one's own knowledge has consequences beyond the epistemic: our work links intellectual humility to support for peaceful resolution of intergroup conflict (<em>Journal of Applied Social Psychology</em>) and to responsiveness to public health guidance (<em>Personality and Individual Differences</em>).</p>
 
       <p class="aside">Methodologically, I work in scale development and psychometrics, structural equation modeling, survival analysis, hierarchical models, and machine learning based methods — a toolkit carried over from clinical biostatistics, where my collaborations span trials published in <em>The Lancet Psychiatry</em> and <em>BMJ</em>.</p>
+    </div>
+  </div>
+</section>
+
+<section id="project">
+  <div class="frame grid">
+    <h2 class="side">Funded project</h2>
+    <div class="content">
+      <div class="grant">
+        <p class="funder">Suffering &amp; Compassion Lab, Duke University · John Templeton Foundation, Grant No. 63879 · 2026–2029</p>
+        <h3><em>Reframing Suffering to Foster Common Humanity and Compassion</em></h3>
+        <p>Everyone suffers, but people understand suffering very differently — how common it is, what causes it, whether it can be meaningful, and who is responsible for it. Our research suggests these beliefs shape whether hardship becomes a source of connection or division. With a three-year Templeton grant, the Suffering &amp; Compassion Lab is building the first comprehensive, plain-language framework of beliefs about suffering, drawing on psychology, philosophy, religion, and history; validating a brief Suffering Beliefs Scale; and designing shareable video micro-interventions that invite people to see suffering as a shared human experience. The aim is practical, evidence-based tools for fostering compassion and common humanity across lines of difference.</p>
+        <ul class="facts">
+          <li><span class="lbl">My role</span>Director, Suffering &amp; Compassion Lab; Co-Principal Investigator</li>
+          <li><span class="lbl">Principal Investigator</span>Rick H. Hoyle, Duke University</li>
+          <li><span class="lbl">Co-Director</span>Christine Lathren, UNC-Chapel Hill</li>
+          <li><span class="lbl">Partners</span>Greater Good Science Center (UC Berkeley); Global Compassion Coalition</li>
+        </ul>
+        <p class="getinvolved">The Lab runs an open call for commissioned reviews of beliefs about suffering from across the humanities, social sciences, and sciences. Inquiries: <a href="mailto:jinyoung.park@duke.edu">jinyoung.park@duke.edu</a>.</p>
+      </div>
     </div>
   </div>
 </section>
