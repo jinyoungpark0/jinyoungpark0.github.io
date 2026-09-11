@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jinyoung Park, PhD — Social Psychologist</title>
+<meta name="description" content="Jinyoung Park studies beliefs about suffering, self-compassion, and intellectual humility — and how they shape resilience, compassion, and common humanity. Postdoctoral associate at Duke and UNC-Chapel Hill.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:    #FBFAF6;
+    --ink:      #21201B;
+    --muted:    #6E6C62;
+    --pine:     #2D5C4C;
+    --pine-dim: #557F70;
+    --hairline: #E5E2D8;
+    --measure:  66ch;
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --sans:  "Karla", "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 1.115rem;
+    line-height: 1.7;
+    font-variant-numeric: oldstyle-num;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--pine); text-decoration-thickness: 1px; text-underline-offset: 3px; transition: color .12s ease; }
+  a:hover { color: var(--pine-dim); }
+  a:focus-visible { outline: 2px solid var(--pine); outline-offset: 3px; border-radius: 1px; }
+
+  /* ---- One alignment system -------------------------------------------
+     Left column: structural labels, set in the sans.
+     Right column: everything meant to be read, set in the serif.
+     The pine rule marks the frame edge; every horizontal rule shares that x. */
+  .frame {
+    max-width: 76rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    border-left: 3px solid transparent;
+  }
+  header .frame { border-left-color: var(--pine); }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 14rem minmax(0, 1fr);
+    column-gap: 4.5rem;
+    align-items: start;
+  }
+  .grid > .side    { grid-column: 1; }
+  .grid > .content { grid-column: 2; }
+
+  @media (max-width: 58rem) {
+    .grid { display: block; }
+    .grid > .side { margin-bottom: 1.5rem; }
+  }
+  @media (max-width: 42rem) {
+    .frame { padding: 0 1.25rem; border-left-width: 2px; }
+  }
+
+  /* ---- Navigation ---- */
+  nav {
+    max-width: 76rem;
+    margin: 0 auto;
+    padding: 1.75rem 2rem 0;
+    border-left: 3px solid transparent;
+    display: flex;
+    align-items: baseline;
+    gap: 1.6rem;
+    flex-wrap: wrap;
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    letter-spacing: 0.01em;
+  }
+  nav .wordmark { font-weight: 600; color: var(--ink); text-decoration: none; margin-right: auto; letter-spacing: 0; }
+  nav a:not(.wordmark) { color: var(--muted); text-decoration: none; }
+  nav a:not(.wordmark):hover { color: var(--pine); text-decoration: underline; text-underline-offset: 4px; }
+  @media (max-width: 42rem) { nav { padding: 1.5rem 1.25rem 0; border-left-width: 2px; gap: 1.1rem; } }
+
+  /* ---- Header ---- */
+  header { padding: 4.5rem 0 4.25rem; }
+  .portrait {
+    display: block;
+    width: 100%;
+    max-width: 11.5rem;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    border-radius: 2px;
+    object-fit: cover;
+    margin-bottom: 1.15rem;
+  }
+  @media (max-width: 58rem) {
+    .portrait { max-width: 8.5rem; margin-bottom: 1rem; }
+  }
+  .kicker {
+    font-family: var(--sans);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+  .kicker strong { display: block; font-weight: 600; color: var(--ink); }
+  h1 {
+    font-size: clamp(2.15rem, 5.1vw, 3.55rem);
+    font-weight: 500;
+    line-height: 1.13;
+    letter-spacing: -0.016em;
+    max-width: 23ch;
+    margin-top: -0.4rem;
+    text-wrap: balance;
+  }
+  h1 em { font-style: italic; font-weight: 500; }
+  .lede { margin-top: 1.75rem; font-size: 1.19rem; max-width: var(--measure); }
+  .lede + .lede { margin-top: 1.05rem; color: #38362F; font-size: 1.115rem; }
+
+  /* ---- Sections ---- */
+  section { padding-bottom: 4.5rem; }
+  section .frame { border-top: 1px solid var(--hairline); padding-top: 2.75rem; }
+  section h2 {
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.015em;
+    line-height: 1.4;
+    color: var(--pine);
+    margin: 0.35rem 0 0;
+    position: sticky;
+    top: 1.5rem;
+  }
+  @media (max-width: 58rem) {
+    section h2 { position: static; font-size: 1.05rem; }
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    margin: 2.1rem 0 0.45rem;
+  }
+  h3:first-of-type { margin-top: 0; }
+
+  p { max-width: var(--measure); }
+  p + p { margin-top: 0.95rem; }
+  .aside {
+    color: var(--muted);
+    font-size: 1.02rem;
+    margin-top: 2.2rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--hairline);
+  }
+
+  /* ---- Bibliography: year in its own column, entries hang off it ---- */
+  .subhead {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    margin: 2.4rem 0 1rem;
+  }
+  .subhead:first-of-type { margin-top: 0; }
+
+  .bib { list-style: none; padding: 0; max-width: 72ch; }
+  .bib li {
+    display: grid;
+    grid-template-columns: 3.6rem minmax(0, 1fr);
+    column-gap: 1.2rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--hairline);
+    font-size: 1.03rem;
+    line-height: 1.58;
+  }
+  .bib li:first-child { padding-top: 0; }
+  .bib li:last-child { border-bottom: none; }
+  .bib .yr {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--muted);
+    padding-top: 0.28rem;
+    font-variant-numeric: lining-nums;
+    white-space: nowrap;
+  }
+  .bib .self { font-weight: 600; }
+  .bib .tag {
+    font-family: var(--sans);
+    font-size: 0.76rem;
+    letter-spacing: 0.03em;
+    color: var(--pine);
+    border: 1px solid var(--hairline);
+    border-radius: 2px;
+    padding: 0.05rem 0.4rem;
+    margin-left: 0.35rem;
+    white-space: nowrap;
+  }
+  @media (max-width: 34rem) {
+    .bib li { display: block; }
+    .bib .yr { display: block; margin-bottom: 0.2rem; padding-top: 0; }
+  }
+
+  .cvline { margin-top: 1.8rem; font-style: italic; color: var(--muted); max-width: var(--measure); }
+
+  /* ---- Books ---- */
+  .titles { list-style: none; padding: 0; margin: 1.3rem 0 0; max-width: var(--measure); }
+  .titles li {
+    display: grid;
+    grid-template-columns: 3.6rem minmax(0, 1fr);
+    column-gap: 1.2rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--hairline);
+    font-size: 1.04rem;
+  }
+  .titles li:last-child { border-bottom: none; }
+  .titles .yr {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--muted);
+    font-variant-numeric: lining-nums;
+    padding-top: 0.2rem;
+  }
+  .titles .pub-note { color: var(--muted); }
+
+  /* ---- Contact ---- */
+  .contact-list { list-style: none; padding: 0; max-width: var(--measure); }
+  .contact-list li {
+    display: grid;
+    grid-template-columns: 5.5rem minmax(0, 1fr);
+    column-gap: 1.2rem;
+    padding: 0.42rem 0;
+    font-size: 1.04rem;
+  }
+  .contact-list .lbl {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    letter-spacing: 0.03em;
+    color: var(--muted);
+    padding-top: 0.25rem;
+  }
+
+  /* ---- Footer ---- */
+  footer { padding-bottom: 4.5rem; color: var(--muted); font-family: var(--sans); font-size: 0.85rem; }
+  footer .frame { border-top: 1px solid var(--hairline); padding-top: 1.9rem; }
+
+  /* ---- Print ---- */
+  @media print {
+    nav, footer, .portrait { display: none; }
+    body { background: #fff; font-size: 10.5pt; line-height: 1.45; }
+    .frame { max-width: none; border-left: none; padding: 0; }
+    .grid { display: block; }
+    section h2 { position: static; color: #000; }
+    a { color: #000; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav aria-label="Site">
+  <a class="wordmark" href="#top">Jinyoung Park</a>
+  <a href="#research">Research</a>
+  <a href="#publications">Publications</a>
+  <a href="#books">Books</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<header id="top">
+  <div class="frame grid">
+    <div class="side">
+      <img class="portrait" src="photo.jpg" alt="Jinyoung Park" width="640" height="800">
+      <p class="kicker"><strong>Jinyoung Park, PhD</strong>Social Psychologist<br>Duke University &amp;<br>UNC-Chapel Hill</p>
+    </div>
+    <div class="content">
+      <h1>Suffering is universal. What we <em>believe</em> about it is not.</h1>
+      <p class="lede">I study the quiet beliefs that shape how people meet hardship — whether suffering is shared or singular, whether it can enrich as well as diminish — and the hypo-egoic capacities that grow alongside them: self-compassion and intellectual humility. Across U.S., Korean, and Israeli samples, these beliefs and capacities predict resilience, compassion, and the recognition of common humanity, even across lines of active conflict.</p>
+      <p class="lede">I am a postdoctoral associate at Duke University and UNC-Chapel Hill, working with Barbara Fredrickson, and Co-Principal Investigator and Project Director of <em>Reframing Suffering to Foster Common Humanity and Compassion</em>, a $1.3M John Templeton Foundation project (2026–2029). I completed my PhD at Duke in 2026, advised by Rick Hoyle and Mark Leary, following an earlier career as a biostatistician at the UNC School of Medicine.</p>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section id="research">
+  <div class="frame grid">
+    <h2 class="side">Research</h2>
+    <div class="content">
+      <h3>Hypo-egoic functioning</h3>
+      <p>My dissertation (Duke, 2026) brought these strands together under a single question: what happens when the self quiets down? Hypo-egoic states — in which self-concern recedes rather than being defended or inflated — appear across self-compassion, intellectual humility, and the belief that suffering is shared. Working with U.S., Korean, and Israeli samples, I found that these self-processes travel together and predict a common set of outcomes: resilience under stress, compassion that extends past one's own group, and a sense of common humanity. The three lines below each develop one facet of that program.</p>
+
+      <h3>Beliefs about suffering</h3>
+      <p>Across five studies, viewing suffering as universal and potentially enriching — rather than only depressing — predicted better psychological adjustment, greater compassion, and, among Israeli adults surveyed during active conflict, recognition of outgroup suffering and support for peaceful resolution. Brief reframing shifted these beliefs experimentally. The flagship paper appears open access in <em>Personality and Social Psychology Bulletin</em>.</p>
+
+      <h3>Self-compassion</h3>
+      <p>A four-year longitudinal study shows stress and self-compassion working in synergy to build resilience — hardship itself becomes generative when met with self-kindness. With collaborators at UNC, I study self-compassion where the stakes are highest: an open trial reducing suicidal ideation in transgender adolescents, a randomized trial of Mindful Self-Compassion for Teens with subsyndromal depression, and programs for caregivers of children with disabilities. I have also written on self-compassion for general audiences in Korean.</p>
+
+      <h3>Intellectual humility</h3>
+      <p>Recognizing the limits of one's own knowledge has consequences beyond the epistemic: our work links intellectual humility to support for peaceful resolution of intergroup conflict (<em>Journal of Applied Social Psychology</em>) and to responsiveness to public health guidance (<em>Personality and Individual Differences</em>).</p>
+
+      <p class="aside">Methodologically, I work in scale development and psychometrics, structural equation modeling, survival analysis, hierarchical models, and machine learning based methods — a toolkit carried over from clinical biostatistics, where my collaborations span trials published in <em>The Lancet Psychiatry</em> and <em>BMJ</em>.</p>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="frame grid">
+    <h2 class="side">Selected publications</h2>
+    <div class="content">
+      <p class="subhead">Social and personality psychology</p>
+      <ul class="bib">
+        <li><span class="yr">2026</span><span><span class="self">Park, J.</span>, Leary, M. R., Lathren, C., Davis, J. M., Weiser, M., &amp; Hoyle, R. Beliefs about suffering, psychological adjustment, and prosocial orientation. <em>Personality and Social Psychology Bulletin.</em> <a href="https://doi.org/10.1177/01461672261475828">doi:10.1177/01461672261475828</a><span class="tag">open access</span></span></li>
+        <li><span class="yr">2026</span><span><span class="self">Park, J.</span>, Lathren, C., Leary, M., Davis, J. M., Weiser, M., Magidovich, A. S., &amp; Hoyle, R. Bridging divides: Intellectual humility's role in peaceful resolution. <em>Journal of Applied Social Psychology, 56</em>(2), 145–154. <a href="https://doi.org/10.1111/jasp.70042">doi:10.1111/jasp.70042</a><span class="tag">open access</span></span></li>
+        <li><span class="yr">in press</span><span><span class="self">Park, J.</span>, Wyly, S., &amp; Hoyle, R. H. Too little, too much: A 4-year longitudinal study of within-person deviations in propensity for overinvolvement and student well-being. <em>Frontiers in Psychology.</em><span class="tag">shared first author</span></span></li>
+        <li><span class="yr">2024</span><span><span class="self">Park, J.</span>, Bluth, K., Lathren, C., Leary, M., &amp; Hoyle, R. The synergy between stress and self-compassion in building resilience: A 4-year longitudinal study. <em>Social and Personality Psychology Compass, 18</em>(7), e12978. <a href="https://doi.org/10.1111/spc3.12978">doi:10.1111/spc3.12978</a></span></li>
+        <li><span class="yr">2024</span><span>Bluth, K., Bryce, A., Lathren, C. R., <span class="self">Park, J.</span>, Pflum, S., &amp; Clayton, M. Reducing suicide ideation in transgender adolescents with mindful self-compassion: An open trial. <em>Mindfulness, 15</em>(12), 3107–3128. <a href="https://doi.org/10.1007/s12671-024-02421-7">doi:10.1007/s12671-024-02421-7</a></span></li>
+        <li><span class="yr">2023</span><span>Jongman-Sereno, K. P., Hoyle, R. H., Davisson, E. K., &amp; <span class="self">Park, J.</span> Intellectual humility and responsiveness to public health recommendations. <em>Personality and Individual Differences, 211</em>, 112243.</span></li>
+      </ul>
+
+      <p class="subhead">Clinical research and biostatistics</p>
+      <ul class="bib">
+        <li><span class="yr">2026</span><span><span class="self">Park, J.</span>, Kadro, Z. O., Honvoh, G. D., Domeniciello, A. F., Ramsden, C. E., Faurot, K. R., &amp; Miller, V. E. Associations between dietary intakes of omega-3 fatty acids, blood levels, and pain interference in people with migraine: A path analysis of randomized trial data. <em>Nutrients, 18</em>(1), Article 3. <a href="https://doi.org/10.3390/nu18010003">doi:10.3390/nu18010003</a></span></li>
+        <li><span class="yr">2025</span><span>Nomura, N., Siafis, S., Schneider-Thoma, J., Brandt, L., <span class="self">Park, J.</span>, Efthimiou, O., … Leucht, S. The trajectory of sedative adverse events caused by antipsychotics: A meta-analysis of individual participant data from randomised, placebo-controlled, clinical trials in acute phase schizophrenia. <em>The Lancet Psychiatry, 12</em>(4), 266–275.</span></li>
+        <li><span class="yr">2021</span><span>Ramsden, C. E., Zamora, D., Faurot, K. R., … <span class="self">Park, J.</span>, … Mann, J. D. Dietary alteration of n-3 and n-6 fatty acids for headache reduction in adults with migraine: Randomized controlled trial. <em>BMJ, 374</em>, n1448.</span></li>
+      </ul>
+
+      <p class="cvline">Author of 20+ peer-reviewed publications. Full list in my <a href="cv.pdf">curriculum vitae</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section id="books">
+  <div class="frame grid">
+    <h2 class="side">Books</h2>
+    <div class="content">
+      <p>Alongside my academic work, I have written nine books in Korean bringing psychological science — self-compassion, self-esteem, social comparison — to general and young-adult readers.</p>
+      <ul class="titles">
+        <li><span class="yr">2023</span><span>Self-Compassion for Children <span class="pub-note">· WooriHakkyo</span></span></li>
+        <li><span class="yr">2023</span><span>Understanding Social Comparison for Adolescents <span class="pub-note">· Soehaemunjib</span></span></li>
+        <li><span class="yr">2019</span><span>Self-Compassion for Teens <span class="pub-note">· WooriHakkyo</span></span></li>
+        <li><span class="yr">2018</span><span>Self-Compassion <span class="pub-note">· Houpress</span></span></li>
+        <li><span class="yr">2017</span><span>Social Psychology for Teens <span class="pub-note">· Wisdom House</span></span></li>
+        <li><span class="yr">2016</span><span>To My Unloving Self: The Psychology of Self-Esteem <span class="pub-note">· Sigongsa</span></span></li>
+      </ul>
+      <p class="aside">Recognized with the Sejong Book Award from Korea's Ministry of Culture (2018) and Book of the Year from the National Library for Children and Young Adults (2020).</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="frame grid">
+    <h2 class="side">Contact</h2>
+    <div class="content">
+      <ul class="contact-list">
+        <li><span class="lbl">Email</span><span><a href="mailto:jinyoung.park@duke.edu">jinyoung.park@duke.edu</a></span></li>
+        <li><span class="lbl">Office</span><span>Department of Psychology &amp; Neuroscience<br>Duke University, Durham, NC</span></li>
+        <li><span class="lbl">ORCID</span><span><a href="https://orcid.org/0000-0003-3653-8905">0000-0003-3653-8905</a></span></li>
+        <li><span class="lbl">CV</span><span><a href="cv.pdf">Curriculum vitae (PDF)</a></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="frame">
+    <p>Jinyoung Park · Last updated September 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>
